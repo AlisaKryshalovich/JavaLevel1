@@ -10,7 +10,7 @@ public class Homework1Task1 {
         outputQuarter(minutes);
     }
     public static void outputQuarter(int minutes){
-        if (0 <= minutes && minutes<= 15){
+        if (0 < minutes && minutes<= 15){
             System.out.println(minutes + " входит в первую четверть часа");
         } else if (16 <= minutes && minutes <= 30){
             System.out.println(minutes + " входит во вторую четверть часа");
