@@ -30,7 +30,7 @@ public class StudentRunner {
                                         .mapToDouble(Double::doubleValue)
                                         .average()
                                         .orElse(0.0))));
-        System.out.println(averageGradeMap);
+        System.out.println("Средняя оценка по курсу: " + averageGradeMap);
 
         Map<Integer, List<String>> stringMap = students.stream()
                 .sorted(new StudentFirstNameComparator().thenComparing(new StudentLastNameComparator()))
