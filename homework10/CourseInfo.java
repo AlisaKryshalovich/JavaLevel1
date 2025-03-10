@@ -4,10 +4,10 @@ import java.util.List;
 
 public class CourseInfo {
 
-    private List<Student> students;
+    private List<String> students;
     private Double averageGrade;
 
-    public CourseInfo(List<Student> students, Double averageGrade) {
+    public CourseInfo(List<String> students, Double averageGrade) {
         this.students = students;
         this.averageGrade = averageGrade;
     }
@@ -20,11 +20,11 @@ public class CourseInfo {
                 '}';
     }
 
-    public List<Student> getStudents() {
+    public List<String> getStudents() {
         return students;
     }
 
-    public void setStudents(List<Student> students) {
+    public void setStudents(List<String> students) {
         this.students = students;
     }
 
