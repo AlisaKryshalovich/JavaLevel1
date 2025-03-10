@@ -42,10 +42,11 @@ public class StudentRunner {
         Map<Integer, CourseInfo> infoMap = students.stream()
                 .collect(Collectors.groupingBy(Student::getCourse,
                         Collectors.collectingAndThen(Collectors.toList(), studentList -> {
-                                List<Student> sortedStudents = studentList.stream()
+                                List<String> sortedStudents = studentList.stream()
                                         .sorted(new StudentFirstNameComparator()
                                                 .thenComparing(new StudentLastNameComparator()))
-                                        .collect(Collectors.toList());
+                                    .collect(Collectors.mapping(Student::getFullName,
+                                                Collectors.toList()));
 
                         double averageGrade = studentList.stream()
                                 .flatMap(s -> s.getGrades().stream())
