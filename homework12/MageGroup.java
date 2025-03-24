@@ -25,10 +25,9 @@ public class MageGroup extends Thread {
             crystals.addRed(dailyRedCrystal);
             crystals.addWhite(dailyWhiteCrystal);
 
-            int loadRedCrystal = RANDOM.nextInt(bound) + additionalBound;
-            int loadWhiteCrystal = RANDOM.nextInt(bound) + additionalBound;
-            if (loadRedCrystal > crystals.getRed()) loadRedCrystal = crystals.getRed();
-            if (loadWhiteCrystal > crystals.getWhite()) loadWhiteCrystal = crystals.getWhite();
+            int totalLoadCrystal = RANDOM.nextInt(bound) + additionalBound;
+            int loadRedCrystal = RANDOM.nextInt(totalLoadCrystal);
+            int loadWhiteCrystal = totalLoadCrystal - loadRedCrystal;
 
             collectedRed += loadRedCrystal;
             collectedWhite += loadWhiteCrystal;
